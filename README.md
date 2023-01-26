@@ -1,4 +1,4 @@
-# **shrek-grocery-bot :fork_and_knife:**
+# **telegram-grocery-bot :fork_and_knife:**
 
 Telegram Bot to help you deal with your grocery trip!
 
@@ -17,6 +17,4 @@ MONGO_URL=*MongoDB connection string*
 # Usage
 - Find **@`your bot id`** in telegram search
 - Click **Start**
-
-# Example
-![Example](https://raw.githubusercontent.com/SENYa-408/shrek-grocery-bot/master/readme-imgs/example.gif)
+ 
