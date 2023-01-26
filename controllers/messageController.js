@@ -5,7 +5,7 @@ module.exports = getResponse = (source, options) => {
   switch (source) {
     case "/start":
       response =
-        "<strong>Oh, hello there!</strong>\n<i>Here is Azfna Techki (Azartheen) (you may know me from my autobiographical films) and I'll help you deal with your grocery trip!</i>\n\n<i>/help for more information</i>";
+        `<strong>Hi ${options.userName ? options.userName : options.fName + ' ' + options.lName} </strong>\n<i>Here is Azfna Techki (Azartheen) (you may know me from my autobiographical films) and I'll help you deal with your grocery trip!</i>\n\n<i>/help for more information</i>`;
       break;
     case "/help":
       response =

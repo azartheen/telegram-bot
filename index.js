@@ -29,8 +29,7 @@ const bot = new TelegramBot(TOKEN, {
   // },
 });
 
-// bot.setWebHook(`${process.env.URL}/bot${process.env.TOKEN}`);
-bot.setWebHook('https://api.telegram.org/bot5924465636:AAHO50laxE7xlCrR50wYlYbQ0310yid4tfA')
+bot.setWebHook(`${process.env.URL}/bot${process.env.TOKEN}`);
 
 // bot.setWebHook()
 console.log("Bot has been started...");
@@ -51,7 +50,12 @@ const recieveData = async (userID) => {
 // Send greeting message
 bot.onText(/^\/start$/, (msg, [source]) => {
   const { id } = msg.chat;
-  const response = getResponse(source);
+  const user = {
+    fName : msg.chat.first_name,
+    lName : msg.chat.last_name,
+    userName : msg.chat.username
+  }
+  const response = getResponse(source , user);
 
   bot.sendMessage(id, response, options);
 });
@@ -197,12 +201,8 @@ bot.on("message", async (msg) => {
   const { id } = msg.chat;
   const response = getResponse("product");
 
-  if (
-    msg.entities ||
-    !isNaN(msg.text) ||
-    new RegExp("^/templates").test(msg.text)
-  )
-    return;
+  if (msg.entities || !isNaN(msg.text) || new RegExp("^/templates").test(msg.text)) return;
+    
 
   await recieveData(msg.from.id);
 

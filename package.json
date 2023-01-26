@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "start-dev": "nodemon index.js"
+    "shop": "nodemon index.js",
+    "redbus": "nodemon redbus.js"
   },
   "author": "Azartheen",
   "license": "ISC",
@@ -13,6 +14,8 @@
     "dotenv": "^8.6.0",
     "mongoose": "^5.13.9",
     "node-telegram-bot-api": "^0.51.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "telegraf": "^3.38.0",
+    "request": "^2.88.1"
   }
 }
