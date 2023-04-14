@@ -4,7 +4,6 @@ Telegram Bot to help you deal with your grocery trip!
 
 # Setup
 1. Clone git repository  
-   `git clone https://github.com/SENYa-408/shrek-grocery-bot.git`
 2. Go to directory with project
 3. Download all dependencies  
    `npm install`
